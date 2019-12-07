@@ -11,6 +11,7 @@ import UIKit
 class CountriesViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var searchBar: UISearchBar!
     
     var countryArr = [Country]() {
         didSet {
@@ -20,12 +21,26 @@ class CountriesViewController: UIViewController {
         }
     }
     
+    var flagArr = [FlagImage]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    var searchQuery = "" {
+        didSet {
+            flagArr = FlagImage.getFlags().filter { $0.name.lowercased().contains(searchQuery.lowercased()) }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.dataSource = self
         tableView.delegate = self
+        searchBar.delegate = self
         loadCountries()
+        loadFlags()
     }
     
     func loadCountries() {
@@ -40,13 +55,17 @@ class CountriesViewController: UIViewController {
         }
     }
     
+    func loadFlags() {
+        flagArr = FlagImage.getFlags()
+    }
+    
     
 }
 
 extension CountriesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return countryArr.count
+        return flagArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,13 +74,39 @@ extension CountriesViewController: UITableViewDataSource {
             fatalError()
         }
         
-        let country = countryArr[indexPath.row]
+        let country = flagArr[indexPath.row]
         
         cell.configureCell(for: country)
         
         return cell
     }
     
+    
+}
+
+extension CountriesViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        searchBar.resignFirstResponder()
+        
+        guard let searchText = searchBar.text else {
+            return
+        }
+        searchQuery = searchText
+
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        guard !searchText.isEmpty else {
+            loadFlags()
+            return
+        }
+        
+        searchQuery = searchText
+        
+    }
     
 }
 

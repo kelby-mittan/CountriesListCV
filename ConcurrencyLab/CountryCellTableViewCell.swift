@@ -22,7 +22,7 @@ class CountryCellTableViewCell: UITableViewCell {
     }
     
     
-    func configureCell(for country: Country) {
+    func configureCell(for country: FlagImage) {
 
         countryLabel.text = country.name
         capitalLabel.text = country.capital

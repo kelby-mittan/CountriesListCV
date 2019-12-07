@@ -55,7 +55,7 @@
             "hr": "Mali udaljeni otoci SAD-a",
             "fa": "جزایر کوچک حاشیه‌ای ایالات متحده آمریکا"
         },
-        "flag": "https://restcountries.eu/data/umi.svg",
+        "flag": "https://www.countryflags.io/um/flat/64.png",
         "regionalBlocs": [],
         "cioc": ""
     },
@@ -133,7 +133,7 @@
             "hr": "Tanzanija",
             "fa": "تانزانیا"
         },
-        "flag": "https://restcountries.eu/data/tza.svg",
+        "flag": "https://www.countryflags.io/tz/flat/64.png",
         "regionalBlocs": [
             {
                 "acronym": "AU",
@@ -211,7 +211,7 @@
             "hr": "Ujedinjeni Arapski Emirati",
             "fa": "امارات متحده عربی"
         },
-        "flag": "https://restcountries.eu/data/are.svg",
+        "flag": "https://www.countryflags.io/ae/flat/64.png",
         "regionalBlocs": [
             {
                 "acronym": "AL",
@@ -295,7 +295,7 @@
             "hr": "Ujedinjeno Kraljevstvo",
             "fa": "بریتانیای کبیر و ایرلند شمالی"
         },
-        "flag": "https://restcountries.eu/data/gbr.svg",
+        "flag": "https://www.countryflags.io/gb/flat/64.png",
         "regionalBlocs": [
             {
                 "acronym": "EU",
@@ -378,7 +378,7 @@
             "hr": "Sjedinjene Američke Države",
             "fa": "ایالات متحده آمریکا"
         },
-        "flag": "https://restcountries.eu/data/usa.svg",
+        "flag": "https://www.countryflags.io/us/flat/64.png",
         "regionalBlocs": [
             {
                 "acronym": "NAFTA",
@@ -458,7 +458,7 @@
             "hr": "Meksiko",
             "fa": "مکزیک"
         },
-        "flag": "https://restcountries.eu/data/mex.svg",
+        "flag": "https://www.countryflags.io/mx/flat/64.png",
         "regionalBlocs": [
             {
                 "acronym": "PA",
