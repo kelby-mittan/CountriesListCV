@@ -29,7 +29,9 @@ class CountriesViewController: UIViewController {
     
     var searchQuery = "" {
         didSet {
-            flagArr = FlagImage.getFlags().filter { $0.name.lowercased().contains(searchQuery.lowercased()) }
+            if !searchQuery.isEmpty {
+                flagArr = FlagImage.getFlags().filter { $0.name.lowercased().contains(searchQuery.lowercased()) }
+            }
         }
     }
     
@@ -59,6 +61,13 @@ class CountriesViewController: UIViewController {
         flagArr = FlagImage.getFlags()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let countryVC = segue.destination as? CountryDetailController, let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("could not load")
+        }
+        countryVC.country = flagArr[indexPath.row]
+    }
     
 }
 
@@ -80,8 +89,6 @@ extension CountriesViewController: UITableViewDataSource {
         
         return cell
     }
-    
-    
 }
 
 extension CountriesViewController: UISearchBarDelegate {
@@ -105,9 +112,7 @@ extension CountriesViewController: UISearchBarDelegate {
         }
         
         searchQuery = searchText
-        
     }
-    
 }
 
 extension CountriesViewController: UITableViewDelegate {

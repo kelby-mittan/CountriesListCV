@@ -34,11 +34,16 @@ class CountryCellTableViewCell: UITableViewCell {
                 DispatchQueue.main.async {
                     self?.flagImage.image = image
                 }
-                
             case .failure(let error):
                 print("error \(error)")
             }
         }
     }
+    
+//    func configureImageForCell(for country: Country) {
+//        countryLabel.text = country.name
+//        capitalLabel.text = country.capital
+//        populationLabel.text = country.population.description
+//    }
     
 }

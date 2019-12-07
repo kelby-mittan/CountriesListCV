@@ -27,15 +27,12 @@ struct FlagImage: Decodable {
 extension FlagImage {
     static func getFlags() -> [FlagImage] {
         var flags = [FlagImage]()
-        
-        
         guard let fileURL = Bundle.main.url(forResource: "countries", withExtension: "json") else {
             fatalError("could not locate json file")
         }
                 
         do {
             let data = try Data(contentsOf: fileURL)
-                        
             let flagsData = try JSONDecoder().decode([FlagImage].self, from: data)
             
             flags = flagsData

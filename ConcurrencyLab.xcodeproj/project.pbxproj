@@ -13,6 +13,7 @@
 		024B0902239B230F00C79FC5 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024B0901239B230F00C79FC5 /* NetworkHelper.swift */; };
 		024B0904239B287800C79FC5 /* ImageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024B0903239B287800C79FC5 /* ImageClient.swift */; };
 		024B0906239C402D00C79FC5 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 024B0905239C402D00C79FC5 /* countries.json */; };
+		024B0908239C5CC600C79FC5 /* CountryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024B0907239C5CC600C79FC5 /* CountryDetailController.swift */; };
 		024F74B5239AE2DF00012906 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F74B4239AE2DF00012906 /* AppDelegate.swift */; };
 		024F74B7239AE2DF00012906 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F74B6239AE2DF00012906 /* SceneDelegate.swift */; };
 		024F74B9239AE2DF00012906 /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F74B8239AE2DF00012906 /* CountriesViewController.swift */; };
@@ -40,6 +41,7 @@
 		024B0901239B230F00C79FC5 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		024B0903239B287800C79FC5 /* ImageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClient.swift; sourceTree = "<group>"; };
 		024B0905239C402D00C79FC5 /* countries.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		024B0907239C5CC600C79FC5 /* CountryDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailController.swift; sourceTree = "<group>"; };
 		024F74B1239AE2DF00012906 /* ConcurrencyLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcurrencyLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		024F74B4239AE2DF00012906 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		024F74B6239AE2DF00012906 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				024F74B6239AE2DF00012906 /* SceneDelegate.swift */,
 				024B0901239B230F00C79FC5 /* NetworkHelper.swift */,
 				024F74B8239AE2DF00012906 /* CountriesViewController.swift */,
+				024B0907239C5CC600C79FC5 /* CountryDetailController.swift */,
 				024F74D6239AEAAA00012906 /* CountryCellTableViewCell.swift */,
 				024B08FF239B1F3300C79FC5 /* Country.swift */,
 				024B08FB239B1D6400C79FC5 /* CountryAPIClient.swift */,
@@ -227,6 +230,7 @@
 				024F74D7239AEAAA00012906 /* CountryCellTableViewCell.swift in Sources */,
 				024F74B9239AE2DF00012906 /* CountriesViewController.swift in Sources */,
 				024B08FE239B1E3000C79FC5 /* AppError.swift in Sources */,
+				024B0908239C5CC600C79FC5 /* CountryDetailController.swift in Sources */,
 				024F74B5239AE2DF00012906 /* AppDelegate.swift in Sources */,
 				024B0904239B287800C79FC5 /* ImageClient.swift in Sources */,
 				024B08FC239B1D6400C79FC5 /* CountryAPIClient.swift in Sources */,
