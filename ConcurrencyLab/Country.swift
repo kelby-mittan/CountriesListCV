@@ -10,5 +10,9 @@ import Foundation
 
 
 struct Country {
+    let name: String
+    let capital: String
+    let population: Int
+    let flag: String
     
 }

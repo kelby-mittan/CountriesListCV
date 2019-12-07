@@ -10,6 +10,7 @@
 		024B08FC239B1D6400C79FC5 /* CountryAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024B08FB239B1D6400C79FC5 /* CountryAPIClient.swift */; };
 		024B08FE239B1E3000C79FC5 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024B08FD239B1E3000C79FC5 /* AppError.swift */; };
 		024B0900239B1F3300C79FC5 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024B08FF239B1F3300C79FC5 /* Country.swift */; };
+		024B0902239B230F00C79FC5 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024B0901239B230F00C79FC5 /* NetworkHelper.swift */; };
 		024F74B5239AE2DF00012906 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F74B4239AE2DF00012906 /* AppDelegate.swift */; };
 		024F74B7239AE2DF00012906 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F74B6239AE2DF00012906 /* SceneDelegate.swift */; };
 		024F74B9239AE2DF00012906 /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F74B8239AE2DF00012906 /* CountriesViewController.swift */; };
@@ -34,6 +35,7 @@
 		024B08FB239B1D6400C79FC5 /* CountryAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAPIClient.swift; sourceTree = "<group>"; };
 		024B08FD239B1E3000C79FC5 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		024B08FF239B1F3300C79FC5 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		024B0901239B230F00C79FC5 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		024F74B1239AE2DF00012906 /* ConcurrencyLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcurrencyLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		024F74B4239AE2DF00012906 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		024F74B6239AE2DF00012906 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			children = (
 				024F74B4239AE2DF00012906 /* AppDelegate.swift */,
 				024F74B6239AE2DF00012906 /* SceneDelegate.swift */,
+				024B0901239B230F00C79FC5 /* NetworkHelper.swift */,
 				024F74B8239AE2DF00012906 /* CountriesViewController.swift */,
 				024F74D6239AEAAA00012906 /* CountryCellTableViewCell.swift */,
 				024B08FF239B1F3300C79FC5 /* Country.swift */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				024B0902239B230F00C79FC5 /* NetworkHelper.swift in Sources */,
 				024B0900239B1F3300C79FC5 /* Country.swift in Sources */,
 				024F74D7239AEAAA00012906 /* CountryCellTableViewCell.swift in Sources */,
 				024F74B9239AE2DF00012906 /* CountriesViewController.swift in Sources */,
