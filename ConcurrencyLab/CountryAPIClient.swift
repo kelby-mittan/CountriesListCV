@@ -12,6 +12,21 @@ struct CountryAPIClient {
     
     static func getCountries(completion: @escaping (Result<[Country], AppError>) -> ()) {
         
+        let url = "https://restcountries.eu/rest/v2/name/united"
+        
+        NetworkHelper.shared.performDataTask(with: url) { (result) in
+            switch result {
+            case .failure(let appError):
+                print(appError)
+            case .success(let data):
+                do {
+                    let countries = try JSONDecoder().decode([Country].self, from: data)
+                    completion(.success(countries))
+                } catch {
+                    print(error)
+                }
+            }
+        }
     }
     
 }

@@ -30,27 +30,27 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="178"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jor-vO-X0O">
-                                                    <rect key="frame" x="20" y="39" width="150" height="100"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jor-vO-X0O">
+                                                    <rect key="frame" x="20" y="52.5" width="100" height="72.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="100" id="FK5-3V-qyS"/>
-                                                        <constraint firstAttribute="width" constant="150" id="GmW-I1-zBM"/>
+                                                        <constraint firstAttribute="height" constant="75" id="FK5-3V-qyS"/>
+                                                        <constraint firstAttribute="width" constant="100" id="GmW-I1-zBM"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCa-rs-tPB">
-                                                    <rect key="frame" x="186" y="80" width="208" height="18"/>
+                                                    <rect key="frame" x="136" y="49.5" width="258" height="18"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAh-cC-CYS">
-                                                    <rect key="frame" x="186" y="39" width="208" height="26.5"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAh-cC-CYS">
+                                                    <rect key="frame" x="136" y="21" width="258" height="20.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mrw-kp-9xV">
-                                                    <rect key="frame" x="186" y="108" width="208" height="18"/>
+                                                    <rect key="frame" x="136" y="77.5" width="258" height="18"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -59,14 +59,14 @@
                                             <constraints>
                                                 <constraint firstItem="Jor-vO-X0O" firstAttribute="centerY" secondItem="Ubf-zg-jan" secondAttribute="centerY" id="8nE-Wn-DQP"/>
                                                 <constraint firstItem="gCa-rs-tPB" firstAttribute="leading" secondItem="Jor-vO-X0O" secondAttribute="trailing" constant="16" id="J3O-wQ-YZr"/>
+                                                <constraint firstItem="gCa-rs-tPB" firstAttribute="top" secondItem="SAh-cC-CYS" secondAttribute="bottom" constant="8" id="L8k-2V-6Rl"/>
+                                                <constraint firstItem="SAh-cC-CYS" firstAttribute="top" secondItem="Ubf-zg-jan" secondAttribute="topMargin" constant="10" id="NbO-4i-PiD"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="SAh-cC-CYS" secondAttribute="trailing" id="QzI-ql-YjC"/>
                                                 <constraint firstItem="Mrw-kp-9xV" firstAttribute="top" secondItem="gCa-rs-tPB" secondAttribute="bottom" constant="10" id="RBJ-yl-sug"/>
-                                                <constraint firstItem="gCa-rs-tPB" firstAttribute="centerY" secondItem="Jor-vO-X0O" secondAttribute="centerY" id="Sd6-Oh-XTs"/>
                                                 <constraint firstItem="SAh-cC-CYS" firstAttribute="leading" secondItem="Jor-vO-X0O" secondAttribute="trailing" constant="16" id="UHz-ey-ZaE"/>
                                                 <constraint firstItem="gCa-rs-tPB" firstAttribute="trailing" secondItem="Ubf-zg-jan" secondAttribute="trailingMargin" id="dpl-qd-J4P"/>
                                                 <constraint firstItem="Jor-vO-X0O" firstAttribute="leading" secondItem="Ubf-zg-jan" secondAttribute="leadingMargin" id="hEf-DX-TXk"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Mrw-kp-9xV" secondAttribute="trailing" id="n1V-Yr-BKZ"/>
-                                                <constraint firstItem="SAh-cC-CYS" firstAttribute="top" secondItem="Jor-vO-X0O" secondAttribute="top" id="seX-fC-BcZ"/>
                                                 <constraint firstItem="Mrw-kp-9xV" firstAttribute="leading" secondItem="Jor-vO-X0O" secondAttribute="trailing" constant="16" id="xcB-Wo-o5M"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -93,6 +93,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Countries" id="yiG-DV-Dao"/>
+                    <connections>
+                        <outlet property="tableView" destination="59q-RT-Mwv" id="kWi-vL-T5Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,4 +120,7 @@
             <point key="canvasLocation" x="-57.971014492753625" y="112.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="photo.fill" catalog="system" width="64" height="46"/>
+    </resources>
 </document>

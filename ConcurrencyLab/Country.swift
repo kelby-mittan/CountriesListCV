@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct Country {
+struct Country: Decodable {
     let name: String
     let capital: String
     let population: Int
