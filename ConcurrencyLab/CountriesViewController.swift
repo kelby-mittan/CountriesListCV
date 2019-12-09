@@ -21,16 +21,11 @@ class CountriesViewController: UIViewController {
         }
     }
     
-    var flagArr = [FlagImage]() {
-        didSet {
-            tableView.reloadData()
-        }
-    }
-    
     var searchQuery = "" {
         didSet {
             if !searchQuery.isEmpty {
-                flagArr = FlagImage.getFlags().filter { $0.name.lowercased().contains(searchQuery.lowercased()) }
+                countryArr = countryArr.filter { $0.name.lowercased().contains(searchQuery.lowercased()) }
+//                flagArr = FlagImage.getFlags().filter { $0.name.lowercased().contains(searchQuery.lowercased()) }
             }
         }
     }
@@ -42,7 +37,6 @@ class CountriesViewController: UIViewController {
         tableView.delegate = self
         searchBar.delegate = self
         loadCountries()
-        loadFlags()
     }
     
     func loadCountries() {
@@ -57,16 +51,12 @@ class CountriesViewController: UIViewController {
         }
     }
     
-    func loadFlags() {
-        flagArr = FlagImage.getFlags()
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         guard let countryVC = segue.destination as? CountryDetailController, let indexPath = tableView.indexPathForSelectedRow else {
             fatalError("could not load")
         }
-        countryVC.country = flagArr[indexPath.row]
+        countryVC.country = countryArr[indexPath.row]
     }
     
 }
@@ -74,7 +64,7 @@ class CountriesViewController: UIViewController {
 extension CountriesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return flagArr.count
+        return countryArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -83,7 +73,7 @@ extension CountriesViewController: UITableViewDataSource {
             fatalError()
         }
         
-        let country = flagArr[indexPath.row]
+        let country = countryArr[indexPath.row]
         
         cell.configureCell(for: country)
         
@@ -107,7 +97,7 @@ extension CountriesViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         guard !searchText.isEmpty else {
-            loadFlags()
+            loadCountries()
             return
         }
         

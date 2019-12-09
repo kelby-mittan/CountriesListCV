@@ -22,13 +22,13 @@ class CountryCellTableViewCell: UITableViewCell {
     }
     
     
-    func configureCell(for country: FlagImage) {
+    func configureCell(for country: Country) {
 
         countryLabel.text = country.name
         capitalLabel.text = country.capital
         populationLabel.text = country.population.description
         
-        ImageClient.fetchImage(for: country.flag) { [weak self] (result) in
+        ImageClient.fetchImage(for: "https://www.countryflags.io/\(country.alpha2Code)/flat/64.png") { [weak self] (result) in
             switch result {
             case .success(let image):
                 DispatchQueue.main.async {
@@ -39,11 +39,5 @@ class CountryCellTableViewCell: UITableViewCell {
             }
         }
     }
-    
-//    func configureImageForCell(for country: Country) {
-//        countryLabel.text = country.name
-//        capitalLabel.text = country.capital
-//        populationLabel.text = country.population.description
-//    }
     
 }

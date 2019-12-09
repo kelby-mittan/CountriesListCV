@@ -15,7 +15,7 @@ class CountryDetailController: UIViewController {
     @IBOutlet var capitalLabel: UILabel!
     @IBOutlet var populationLabel: UILabel!
     
-    var country: FlagImage?
+    var country: Country?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class CountryDetailController: UIViewController {
         capitalLabel.text = "Capital: \(validCountry.capital)"
         populationLabel.text = "Population: \(validCountry.population.description)"
         
-        ImageClient.fetchImage(for: validCountry.flag) { [weak self] (result) in
+        ImageClient.fetchImage(for: "https://www.countryflags.io/\(validCountry.alpha2Code)/flat/64.png") { [weak self] (result) in
             switch result {
             case .success(let image):
                 DispatchQueue.main.async {
