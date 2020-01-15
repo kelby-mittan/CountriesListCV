@@ -201,21 +201,63 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yvF-tR-CWE">
-                                    <size key="itemSize" width="308" height="295"/>
+                                    <size key="itemSize" width="268" height="288"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="nah-Ek-fzw">
-                                        <rect key="frame" x="53" y="0.0" width="308" height="295"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="nah-Ek-fzw" customClass="CollectionViewCell" customModule="ConcurrencyLab" customModuleProvider="target">
+                                        <rect key="frame" x="73" y="0.0" width="268" height="288"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XRa-5d-8NJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="308" height="295"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="268" height="288"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0Q-dH-QId">
+                                                    <rect key="frame" x="10" y="8" width="248" height="20.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPU-9I-SwE">
+                                                    <rect key="frame" x="10" y="38.5" width="248" height="18"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDO-VT-aUh">
+                                                    <rect key="frame" x="10" y="211" width="248" height="18"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FSH-3j-QwY">
+                                                    <rect key="frame" x="33.5" y="72.5" width="201" height="127"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="FSH-3j-QwY" firstAttribute="width" secondItem="XRa-5d-8NJ" secondAttribute="width" multiplier="0.75" id="0Nf-tP-ZzO"/>
+                                                <constraint firstItem="EDO-VT-aUh" firstAttribute="leading" secondItem="XRa-5d-8NJ" secondAttribute="leading" constant="10" id="0mE-qB-bOB"/>
+                                                <constraint firstAttribute="trailing" secondItem="EDO-VT-aUh" secondAttribute="trailing" constant="10" id="20X-4e-dqX"/>
+                                                <constraint firstAttribute="trailing" secondItem="i0Q-dH-QId" secondAttribute="trailing" constant="10" id="61S-0L-1Mq"/>
+                                                <constraint firstItem="EDO-VT-aUh" firstAttribute="top" secondItem="FSH-3j-QwY" secondAttribute="bottom" constant="10" id="7p3-si-pId"/>
+                                                <constraint firstItem="FSH-3j-QwY" firstAttribute="top" secondItem="TPU-9I-SwE" secondAttribute="bottom" constant="15" id="7sM-3d-6YB"/>
+                                                <constraint firstItem="i0Q-dH-QId" firstAttribute="leading" secondItem="XRa-5d-8NJ" secondAttribute="leading" constant="10" id="FfL-6i-KA9"/>
+                                                <constraint firstItem="TPU-9I-SwE" firstAttribute="leading" secondItem="XRa-5d-8NJ" secondAttribute="leading" constant="10" id="JOh-rw-IW2"/>
+                                                <constraint firstItem="TPU-9I-SwE" firstAttribute="top" secondItem="i0Q-dH-QId" secondAttribute="bottom" constant="10" id="PF3-TG-UUo"/>
+                                                <constraint firstItem="FSH-3j-QwY" firstAttribute="centerX" secondItem="XRa-5d-8NJ" secondAttribute="centerX" id="acg-kT-m94"/>
+                                                <constraint firstAttribute="trailing" secondItem="TPU-9I-SwE" secondAttribute="trailing" constant="10" id="ckg-0M-WXv"/>
+                                                <constraint firstItem="FSH-3j-QwY" firstAttribute="height" secondItem="XRa-5d-8NJ" secondAttribute="height" multiplier="0.45" id="ga8-Y9-Qoj"/>
+                                                <constraint firstItem="i0Q-dH-QId" firstAttribute="top" secondItem="XRa-5d-8NJ" secondAttribute="top" constant="8" id="lPS-jd-scT"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="308" height="295"/>
+                                        <size key="customSize" width="268" height="288"/>
                                         <connections>
+                                            <outlet property="capitalLabel" destination="TPU-9I-SwE" id="Fet-rJ-ucb"/>
+                                            <outlet property="countryLabel" destination="i0Q-dH-QId" id="ZWb-Yh-vFm"/>
+                                            <outlet property="flagImage" destination="FSH-3j-QwY" id="QbH-O0-eqI"/>
+                                            <outlet property="populationLabel" destination="EDO-VT-aUh" id="YfD-Fe-nby"/>
                                             <segue destination="JLk-HK-aNt" kind="show" id="0nB-tp-6dj"/>
                                         </connections>
                                     </collectionViewCell>
@@ -283,6 +325,6 @@
         <image name="photo.fill" catalog="system" width="64" height="46"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0nB-tp-6dj"/>
+        <segue reference="bok-GU-qbL"/>
     </inferredMetricsTieBreakers>
 </document>
