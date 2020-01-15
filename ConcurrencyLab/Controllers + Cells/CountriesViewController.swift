@@ -13,7 +13,6 @@ class CountriesViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var searchBar: UISearchBar!
     
-    // TESTING COMMIT
     
     var countryArr = [Country]() {
         didSet {

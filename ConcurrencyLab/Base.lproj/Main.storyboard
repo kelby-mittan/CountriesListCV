@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eVW-3Z-zCB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I0x-S5-OFe">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +21,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="59q-RT-Mwv">
-                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="countryCell" rowHeight="178" id="kqE-7H-tU7" customClass="CountryCellTableViewCell" customModule="ConcurrencyLab" customModuleProvider="target">
@@ -101,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="852.17391304347836" y="112.5"/>
+            <point key="canvasLocation" x="1762.3188405797102" y="112.5"/>
         </scene>
         <!--Country Detail Controller-->
         <scene sceneID="cca-Wg-ayk">
@@ -163,12 +164,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10y-XR-PEf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1767" y="113"/>
+            <point key="canvasLocation" x="2762" y="619"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Table-->
         <scene sceneID="Et1-sy-woW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eVW-3Z-zCB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Table" image="flag.circle.fill" catalog="system" id="kUi-ko-bVa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sfB-uI-Cf3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -181,10 +183,106 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2D-Tx-c0B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="852.17391304347836" y="112.5"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="WYL-Kz-xUR">
+            <objects>
+                <viewController id="oeb-Gi-I62" customClass="CollectionViewController" customModule="ConcurrencyLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bi8-fo-PUh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="N2k-2D-cis">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pgl-ez-Vo8">
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yvF-tR-CWE">
+                                    <size key="itemSize" width="308" height="295"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="nah-Ek-fzw">
+                                        <rect key="frame" x="53" y="0.0" width="308" height="295"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XRa-5d-8NJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="308" height="295"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="308" height="295"/>
+                                        <connections>
+                                            <segue destination="JLk-HK-aNt" kind="show" id="0nB-tp-6dj"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Pgl-ez-Vo8" firstAttribute="bottom" secondItem="EaZ-zg-hDV" secondAttribute="bottom" id="04H-Ds-BfY"/>
+                            <constraint firstItem="Pgl-ez-Vo8" firstAttribute="trailing" secondItem="EaZ-zg-hDV" secondAttribute="trailing" id="6zb-15-NYE"/>
+                            <constraint firstItem="Pgl-ez-Vo8" firstAttribute="top" secondItem="N2k-2D-cis" secondAttribute="bottom" symbolic="YES" id="Irf-CK-x7O"/>
+                            <constraint firstItem="N2k-2D-cis" firstAttribute="leading" secondItem="EaZ-zg-hDV" secondAttribute="leading" id="S8B-eG-w98"/>
+                            <constraint firstItem="N2k-2D-cis" firstAttribute="top" secondItem="EaZ-zg-hDV" secondAttribute="top" id="fXk-xi-lTt"/>
+                            <constraint firstItem="Pgl-ez-Vo8" firstAttribute="leading" secondItem="EaZ-zg-hDV" secondAttribute="leading" id="lhv-3g-ucX"/>
+                            <constraint firstItem="N2k-2D-cis" firstAttribute="trailing" secondItem="EaZ-zg-hDV" secondAttribute="trailing" id="nn3-sK-4RT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EaZ-zg-hDV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IsH-UV-JWz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S2Z-sg-VBM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1760.8695652173915" y="874.55357142857144"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="aMb-6H-1r4">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="I0x-S5-OFe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kO7-9B-Dwu">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="eVW-3Z-zCB" kind="relationship" relationship="viewControllers" id="E17-Sl-IAN"/>
+                        <segue destination="KSN-qo-Ajq" kind="relationship" relationship="viewControllers" id="GD1-cg-NbY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cib-TF-Y3m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="-57.971014492753625" y="112.5"/>
+        </scene>
+        <!--collection-->
+        <scene sceneID="nEf-Hn-N2a">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KSN-qo-Ajq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="collection" image="flag.circle.fill" catalog="system" id="RX3-xQ-GYd"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="u7h-ix-zo9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oeb-Gi-I62" kind="relationship" relationship="rootViewController" id="JVP-Bv-6YL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jQA-2o-iKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850.72463768115949" y="874.55357142857144"/>
         </scene>
     </scenes>
     <resources>
+        <image name="flag.circle.fill" catalog="system" width="64" height="60"/>
         <image name="photo.fill" catalog="system" width="64" height="46"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="0nB-tp-6dj"/>
+    </inferredMetricsTieBreakers>
 </document>
