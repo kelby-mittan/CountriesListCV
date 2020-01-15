@@ -107,7 +107,7 @@
         <!--Country Detail Controller-->
         <scene sceneID="cca-Wg-ayk">
             <objects>
-                <viewController id="JLk-HK-aNt" customClass="CountryDetailController" customModule="ConcurrencyLab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CountryDetailController" id="JLk-HK-aNt" customClass="CountryDetailController" customModule="ConcurrencyLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="585-6y-OXw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -277,6 +277,10 @@
                         <viewLayoutGuide key="safeArea" id="EaZ-zg-hDV"/>
                     </view>
                     <navigationItem key="navigationItem" id="IsH-UV-JWz"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Pgl-ez-Vo8" id="DUX-sr-ho9"/>
+                        <outlet property="searchBar" destination="N2k-2D-cis" id="8vz-cP-81f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2Z-sg-VBM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -325,6 +329,6 @@
         <image name="photo.fill" catalog="system" width="64" height="46"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bok-GU-qbL"/>
+        <segue reference="0nB-tp-6dj"/>
     </inferredMetricsTieBreakers>
 </document>
