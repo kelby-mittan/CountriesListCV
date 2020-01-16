@@ -25,7 +25,6 @@ class CollectionViewController: UIViewController {
         didSet {
             if !searchQuery.isEmpty {
                 countryArr = countryArr.filter { $0.name.lowercased().contains(searchQuery.lowercased()) }
-                //                flagArr = FlagImage.getFlags().filter { $0.name.lowercased().contains(searchQuery.lowercased()) }
             }
         }
     }
@@ -103,7 +102,7 @@ extension CollectionViewController: UICollectionViewDelegateFlowLayout {
         let itemWidth: CGFloat = (maxWidth - totalSpacing) / numberOfItems
         
 //        return CGSize(width: itemWidth, height: (itemWidth * 2))
-        return CGSize(width: 180, height: 350)
+        return CGSize(width: 200, height: 300)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
